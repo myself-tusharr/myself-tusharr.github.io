@@ -1,0 +1,222 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    text-transform:uppercase;
+    font-family: "Arsenal SC", sans-serif;
+}
+
+/* designing cards */
+
+.card-container{
+    height:230px;
+    background: rgb(7,3,18);
+    background: linear-gradient(45deg, rgba(7,3,18,1) 0%, rgba(8,5,80,1) 50%, rgba(0,0,0,1) 100%);
+}
+.card {
+    width:250px;
+    height:150px;
+    border-radius:5px;
+    position:absolute;
+}
+.card-front {
+    background-color:red;
+    background: linear-gradient(225deg, hsla(9, 58%, 47%, 1) 0%, hsla(215, 76%, 41%, 1) 100%);
+    background: -moz-linear-gradient(225deg, hsla(9, 58%, 47%, 1) 0%, hsla(215, 76%, 41%, 1) 100%);
+    background: -webkit-linear-gradient(225deg, hsla(9, 58%, 47%, 1) 0%, hsla(215, 76%, 41%, 1) 100%);
+    z-index:1;
+    /* for mobile */
+    top:120px;
+    left:20px;
+}
+.card-front .circle{
+    border-radius:50%;
+    display:inline-block;
+    position:absolute;
+}
+.card-front .circle1 {
+    background-color:white;
+    width:30px;
+    height:30px;
+    margin-top:18px;
+    margin-left:20px;
+}
+.card-front .circle2 {
+    border:1px solid white;
+    width:12.5px;
+    height:12.5px;
+    margin-left:60px;
+    margin-top:27.5px;
+}
+.card-front .number,.card .other-info {
+    color:white;
+    width:80%;
+    margin-left:10%;
+}
+.card-front .number {
+    margin-top:90px;
+    font-size:15px;
+    word-spacing:5px;
+    letter-spacing:2px;
+}
+.card-front .other-info {
+    font-size:10px;
+    margin-top:15px;
+    word-spacing:2px;
+    letter-spacing:1px;
+}
+.card-front .other-info > * {
+    display:inline-block;
+}
+.card-front .other-info .expiry-date {
+    float:right;
+}
+.card-back {
+    background-color:#ddd;
+    z-index:0;
+    /* for mobile */
+    top:40px;
+    right:20px;
+}
+.card-back .strip {
+    background-color:black;
+    height:30px;
+    margin-top:15px;
+}
+.card-back .cvc {
+    background-color:#aaa;
+    width:80%;
+    margin-left:10%;
+    margin-top:18px;
+    padding:8px;
+    border-radius:5px;
+    text-align:right;
+    color:white;
+    font-size:10px;
+    letter-spacing:1px;
+}
+
+
+/* designing form */
+.form-container {
+    display:block;
+}
+.form {
+    padding:20px 30px;
+    
+    /* for mobile */
+    width:100%;
+    margin-top:50px;
+}
+.form label {
+    padding:5px 0px;
+    display:block;
+    margin-top:15px;
+    font-size:15px;
+}
+.form input {
+    padding:10px;
+    border-radius:5px;
+    border:1px solid grey;
+    width:100%;
+}
+.form > div {
+    width:47.5%;
+}
+.form .expiry-date {
+    float:left;
+}
+.form .expiry-date > input {
+    width:65px;
+}
+.form .expiry-date input[name="year"] {
+    float:right;
+}
+.form .cvc {
+    float:right;
+}
+.form input[type="submit"] {
+    background-color:black;
+    color:white;
+    border:none;
+    margin-top:20px;
+}
+
+/* designing success screen */
+.success-box {
+    padding:20px 30px;
+    text-align:center;
+    display:none;
+    /*for mobile*/
+    width:100%;
+    margin-top:90px;
+}
+.success-box .symbol {
+    width:50px;
+    height:50px;
+    background-color:#112255;
+    border-radius:50%;
+    color:white;
+    font-size:30px;
+    padding:8px;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+.success-box .greeting {
+    font-size:50px;
+    letter-spacing:2px;
+    word-spacing:5px;
+    margin-top:20px;
+}
+.success-box .message {
+    font-size:18px;
+    margin-top:10px;
+    color:#777;
+}
+.success-box input {
+    background-color:black;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    width:85%;
+    margin-top:20px;
+}
+@media only screen and (min-width:950px){
+    .card-container{
+        height:100vh;
+        width:350px;
+        float:left;
+    }
+    .card-container .card{
+        bottom:0;
+        right:0;
+        top:0;
+        left:0;
+    }
+    .card-container .card-front{
+        top:50px;
+        left:200px;
+    }
+    .card-container .card-back{
+        top:250px;
+        left:150px;
+    }
+    .form-container{
+        width:calc(100vw - 350px);
+        float:right;
+    }
+    .form-container .form{
+        width:350px;
+        margin-top:50px;
+        margin-left:200px;
+    }
+    .success-box{
+        float:right;
+        margin-top:100px;
+        margin-right:180px;
+        width:350px;
+    }
+}
