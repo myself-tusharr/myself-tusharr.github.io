@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html langr"en">
+<head>
+    <title>Frontend Challange #1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- card design -->
+    <div class="card-container">
+        <div class="card card-front">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="number">
+                0000 0000 0000 0000
+            </div>
+            <div class="other-info">
+                <div class="display-name">
+                    XXXXX XXXXXX
+                </div>
+                <div class="expiry-date">
+                    00/00
+                </div>
+            </div>
+        </div>
+        <div class="card card-back">
+            <div class="strip"></div>
+            <div class="cvc">000</div>
+        </div>
+    </div>
+    <!-- form design -->
+    <div class="form-container">
+        <form method="POST" action="/" class="form">
+            <label for="name">Cardholder Name</label>
+            <input name="name" placeholder="e.g. Andrew Something"/>
+            <br />
+            <label for="number">Card Number</label>
+            <input name="number" type="tel" placeholder="e.g. 1234 5678 9101 1121"/>
+            <div class="expiry-date">
+                <label for="month">Expiry Date (MM/YY)</label>
+                <input name="month" placeholder="e.g. 07" type="number"/>
+                <input name="year" placeholder="e.g. 26" type="number"/>
+            </div>
+            <div class="cvc">
+                <label for="cvc">CVC</label>
+                <input name="cvc" placeholder="e.g. 612" type="number"/>
+            </div>
+            <input type="submit" value="CONFIRM"/>
+        </form>
+    </div>
+    <!-- success screen -->
+    <div class="success-box">
+        <div class="symbol">✓</div>
+        <div class="greeting">thank you!</div>
+        <div class="message">We have added your card details</div>
+        <input type="submit" value="CONTINUE" onclick="console.log('oops! your card details got leaked!')">
+    </div>
+</body>
+</html>
