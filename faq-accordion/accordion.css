@@ -1,0 +1,77 @@
+:root[data-theme="dark"] {
+    --bg-main:#222831;
+    --text-main:#ccc;
+    --bg-box:#31363F;
+}
+:root[data-theme="light"] {
+    --bg-main:#EEEEEE;
+    --text-main:#444;
+    --bg-box:#F8F4EA;
+}
+
+* {
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+ }
+body {
+    background-color:var(--bg-main);
+    color:var(--text-main);
+    padding:0px 5% 50px 5%;
+    position:relative;
+}
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.themer {
+    width:30px;
+    height:30px;
+    font-size:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0.75;
+    cursor:pointer;
+}
+h1{
+    font-size:18px;
+    font-family:"fantasy";
+    padding:2px 5px;
+}
+.box {
+    background-color:var(--bg-box);
+    margin:10px auto;
+    border-radius:2.5px;
+    box-shadow:5px 5px 5px rgba(0,0,0,0.1);
+    padding:15px 45px 15px 20px;
+    position:relative;
+}
+.que {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight:bold;
+    font-size:15px;
+    min-height:30px;
+}
+.toggleAns {
+    width:25px;
+    height:25px;
+    position:absolute;
+    top:15px;
+    right:10px;
+    font-size:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+.ans {
+    font-family:"Ubuntu", sans-serif;
+    font-size:13px;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:0.1px solid grey;
+    display:none;
+}

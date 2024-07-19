@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+    <head>
+        <title>Accordion</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="accordion.css">
+        <script src="accordion.js"></script>
+        
+        <!-- Questions & Answers -->
+        <script>
+            const qna = [["Why did the chicken cross the playground?","To get to the other slide! It had heard rumors of a legendary slide on the other side of the playground, a slide so tall and twisty that it was said to induce a state of pure, unadulterated joy in all who dared to ride it. This chicken, a thrill-seeker at heart, simply couldn't resist the allure of this fabled slide. It dodged rogue soccer balls, evaded tag-playing children, and even braved the treacherous sandbox, all in pursuit of the ultimate sliding experience."],["Why did the bicycle fall over?","Because it had developed an existential crisis. After years of dutifully carrying its rider from point A to point B, the bicycle began to question its purpose in life. Was it merely a mode of transportation, or was there something more to its existence? This internal turmoil manifested itself in a wobbly front wheel, a hesitant handlebar, and ultimately, a dramatic collapse onto the pavement. It took a pep talk from a friendly tricycle and a new set of reflective spokes to restore the bicycle's sense of self-worth and get it back on its wheels."],["Why did the golfer wear two pairs of pants?","In preparation for a synchronized pants-dropping celebration. He and his golfing buddies had made a pact that if anyone scored a hole-in-one, they would all simultaneously drop their pants in a jubilant display of victory. This golfer, ever the optimist, decided to wear two pairs of pants just in case he managed to sink two holes-in-one in a single round. The extra pair of pants would ensure that he wouldn't be left out of the celebratory pants - dropping extravaganza, even if his golfing prowess exceeded all expectations."],["Why can't you trust atoms?","Because they make up everything! They're the building blocks of the universe, the fundamental constituents of all matter. From the tiniest grain of sand to the most massive star, everything is composed of atoms. And with such a vast and pervasive presence, it's only natural that they would develop a bit of an ego. They might seem harmless enough, but who knows what kind of mischief they're getting into when we're not looking? They could be plotting to overthrow the periodic table, or conspiring to create a new element that will wreak havoc on the world. It's best to keep a watchful eye on those atoms, just in case they decide to go rogue."]];
+        </script>
+        
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>Frequently Asked Questions</h1>
+            <div class="themer" onclick="toggleTheme(this)"></div>
+        </div>
+        <!-- gen Question-Answer elements dynamically -->
+        <script>
+            let count = 3;
+            qna.forEach((list) => {
+                const box = document.createElement("div");
+                box.className = "box";
+                document.body.appendChild(box);
+                const que = `<div class="que">`+list[0]+`</div>`;
+                const tog = `<div class="toggleAns" onclick="toggleAns(`+count+`,this)">+</div>`
+                const ans = `<div class="ans" `+`id="ans`+count+`"`+`>`+list[1]+`</div>`;
+                box.innerHTML = que+tog+ans;
+                count += 1;
+            });
+        </script>
+    </body>
+</html>
